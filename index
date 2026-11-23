@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Remodelación de Baño - Propuestas de Diseño</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .tab-btn.active {
+            background-color: #0f172a;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Header & Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white shadow-md">
+                    <i class="fa-solid fa-shower text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-tight text-slate-900 leading-none">Arquitectura & Remodelación</h1>
+                    <p class="text-xs text-slate-500 mt-1 font-medium">Catálogo Ejecutivo de Baños 2026</p>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-semibold">
+                <a href="#overview" class="px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Resumen</a>
+                <a href="#opcion-1" class="px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Kit 1: Gris Neutro</a>
+                <a href="#opcion-2" class="px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Kit 2: Beige Cálido</a>
+                <a href="#opcion-3" class="px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Kit 3: Cenefa & Ducha</a>
+                <a href="#comparativa" class="px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">Comparativa</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <button onclick="window.print()" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2 text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition">
+                    <i class="fa-solid fa-print"></i>
+                    <span>Imprimir / PDF</span>
+                </button>
+                <a href="#contacto" class="inline-flex items-center space-x-2 px-4 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-xl shadow-sm transition transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Cotizar</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white py-16 lg:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-sky-500/10 border border-sky-400/20 text-sky-300 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                    <span>Propuestas Integrales de Remodelación</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                    Catálogo de Opciones para Transformación de Baños
+                </h2>
+                <p class="mt-4 text-slate-300 text-base sm:text-lg font-normal leading-relaxed">
+                    Explore nuestras tres alternativas de diseño diseñadas para optimizar el espacio, realzar la estética contemporánea y proporcionar durabilidad garantizada con materiales de primera calidad.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <div class="flex items-center space-x-2 text-slate-300 text-xs sm:text-sm bg-slate-800/80 px-4 py-2.5 rounded-xl border border-slate-700">
+                        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                        <span>Cotizaciones Transparentes</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-slate-300 text-xs sm:text-sm bg-slate-800/80 px-4 py-2.5 rounded-xl border border-slate-700">
+                        <i class="fa-solid fa-cube text-sky-400"></i>
+                        <span>Visualización 3D Realista</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-slate-300 text-xs sm:text-sm bg-slate-800/80 px-4 py-2.5 rounded-xl border border-slate-700">
+                        <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                        <span>Garantía de Obra y Materiales</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Cards Section -->
+    <section id="overview" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Kit Económico Continuo (Gris Neutro) -->
+            <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-200 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300 group">
+                <div class="relative h-64 bg-slate-100 overflow-hidden">
+                    <img src="Kit Económico Continuo_2.jpg" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition duration-500" alt="Kit Económico Continuo - Render Realista">
+                    <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        Opción 1
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-sky-600 uppercase tracking-wider mb-1">Económico Continuo</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Gris Neutro Minimalista</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Formato uniforme de 60x60 cm que maximiza la amplitud visual mediante juntas reducidas y un acabado elegante gris mate.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-sky-500"></i>
+                                <span>Cerámica Continua 60x60 en muros y piso</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-sky-500"></i>
+                                <span>Grifería Monomando Negro Mate</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-sky-500"></i>
+                                <span>División en Vidrio Templado 8mm</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#opcion-1" class="w-full text-center px-4 py-3 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 text-sm font-semibold rounded-xl transition duration-200 flex items-center justify-center space-x-2">
+                        <span>Ver Detalle Kit 1</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: Kit Beige Cálido Texturizado -->
+            <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-200 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300 group">
+                <div class="relative h-64 bg-slate-100 overflow-hidden">
+                    <img src="Kit Beige Cálido Texturizado_2.jpg" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition duration-500" alt="Kit Beige Cálido Texturizado - Render Realista">
+                    <div class="absolute top-4 left-4 bg-amber-600/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        Opción 2
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Cálido Orgánico</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Beige Texturizado Spa</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Tonos beige naturales y textura sutil tipo travertino que crean un ambiente acogedor, relajante y moderno.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-amber-500"></i>
+                                <span>Porcelanato Beige Texturizado 60x120</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-amber-500"></i>
+                                <span>Mueble Flotante con Acabado Madera</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-amber-500"></i>
+                                <span>Iluminación LED Perimetral Cálida</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#opcion-2" class="w-full text-center px-4 py-3 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 text-sm font-semibold rounded-xl transition duration-200 flex items-center justify-center space-x-2">
+                        <span>Ver Detalle Kit 2</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: Kit Cenefa y Ducha Antideslizante -->
+            <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-200 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300 group">
+                <div class="relative h-64 bg-slate-100 overflow-hidden">
+                    <img src="Kit Cenefa y Ducha Antideslizante_2.jpg" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition duration-500" alt="Kit Cenefa y Ducha Antideslizante - Render Realista">
+                    <div class="absolute top-4 left-4 bg-emerald-600/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        Opción 3
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1">Diseño & Seguridad</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Cenefa & Ducha Antideslizante</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                            Combinación de detalle decorativo con cenefa horizontal y piso especial de textura antideslizante para máximo confort.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-500"></i>
+                                <span>Cenefa Decorativa Mosaico en Ducha</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-500"></i>
+                                <span>Piso Antideslizante R11 con Relieve</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-500"></i>
+                                <span>Grifería Cromo de Alta Resistencia</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#opcion-3" class="w-full text-center px-4 py-3 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 text-sm font-semibold rounded-xl transition duration-200 flex items-center justify-center space-x-2">
+                        <span>Ver Detalle Kit 3</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Detailed Section Option 1 -->
+    <section id="opcion-1" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-4 border-b border-slate-200">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-sky-100 text-sky-800 font-bold text-xs rounded-md uppercase tracking-wide mb-2">Opción 1</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Kit Económico Continuo (Gris Neutro)</h2>
+                    <p class="text-slate-600 text-sm mt-1">Diseño moderno caracterizado por líneas limpias, continuidad visual y excelente relación costo-beneficio.</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex items-center space-x-2">
+                    <span class="text-xs text-slate-500 font-medium">Estilo:</span>
+                    <span class="bg-slate-100 text-slate-800 font-semibold text-xs px-3 py-1 rounded-full border border-slate-200">Minimalista Urbano</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Viewer Column (Render 3D / Materiales / Plano) -->
+                <div class="lg:col-span-7 bg-slate-50 rounded-2xl p-4 sm:p-6 border border-slate-200">
+                    <!-- Tab Buttons -->
+                    <div class="flex space-x-2 mb-4 bg-slate-200/70 p-1.5 rounded-xl">
+                        <button onclick="switchKitTab('kit1', 'render')" id="tab-kit1-render" class="tab-btn active flex-1 py-2 px-3 text-xs sm:text-sm font-semibold rounded-lg transition duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-cube"></i>
+                            <span>Render 3D</span>
+                        </button>
+                        <button onclick="switchKitTab('kit1', 'materials')" id="tab-kit1-materials" class="tab-btn flex-1 py-2 px-3 text-xs sm:text-sm font-semibold text-slate-600 rounded-lg hover:bg-slate-300/50 transition duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-swatchbook"></i>
+                            <span>Materiales</span>
+                        </button>
+                        <button onclick="switchKitTab('kit1', 'plan')" id="tab-kit1-plan" class="tab-btn flex-1 py-2 px-3 text-xs sm:text-sm font-semibold text-slate-600 rounded-lg hover:bg-slate-300/50 transition duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                            <span>Plano Técnico</span>
+                        </button>
+                    </div>
+
+                    <!-- View Container -->
+                    <div class="relative h-[380px] sm:h-[460px] rounded-xl overflow-hidden bg-white border border-slate-200 shadow-inner">
+                        <!-- View 1: Render 3D -->
+                        <div id="view-kit1-render" class="w-full h-full">
+                            <img src="Kit Económico Continuo_2.jpg" class="w-full h-full object-cover rounded-xl" alt="Kit Económico Continuo - Render Realista">
+                        </div>
+
+                        <!-- View 2: Materiales -->
+                        <div id="view-kit1-materials" class="hidden w-full h-full p-6 bg-slate-900 text-white overflow-y-auto">
+                            <h4 class="text-sm font-bold text-sky-400 mb-4 uppercase tracking-wider">Paleta de Materiales y Acabados</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+                                    <div class="h-20 bg-slate-400 rounded-lg mb-2"></div>
+                                    <p class="text-xs font-semibold">Cerámica Gris 60x60</p>
+                                    <p class="text-[10px] text-slate-400">Acabado Mate Neutro</p>
+                                </div>
+                                <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+                                    <div class="h-20 bg-slate-950 rounded-lg mb-2 border border-slate-700"></div>
+                                    <p class="text-xs font-semibold">Grifería Monomando</p>
+                                    <p class="text-[10px] text-slate-400">Negro Mate Electrostático</p>
+                                </div>
+                                <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+                                    <div class="h-20 bg-sky-200/20 border border-sky-400/40 rounded-lg mb-2"></div>
+                                    <p class="text-xs font-semibold">Vidrio Templado</p>
+                                    <p class="text-[10px] text-slate-400">8mm Transparente</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- View 3: Plano Técnico -->
+                        <div id="view-kit1-plan" class="hidden w-full h-full p-6 bg-slate-100 flex flex-col justify-center items-center text-center">
+                            <i class="fa-solid fa-drafting-compass text-5xl text-slate-400 mb-3"></i>
+                            <h4 class="text-base font-bold text-slate-800">Distribución de Planta - Kit 1</h4>
+                            <p class="text-xs text-slate-500 max-w-sm mt-1">
+                                Layout optimizado para baños de 3.5m² a 5m². Zona de ducha con pendiente integrada de 2%.
+                            </p>
+                            <div class="mt-4 px-4 py-2 bg-white rounded-lg border border-slate-300 text-xs font-mono text-slate-700">
+                                Ducha: 1.20m x 0.90m | Lavamanos: 0.60m | Sanitario: 0.70m
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specs & Description Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Especificaciones Clave</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Revestimiento Muros:</span>
+                                <span class="font-semibold text-slate-900">Cerámica 60x60 Gris Continuo</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Revestimiento Piso:</span>
+                                <span class="font-semibold text-slate-900">Cerámica Antideslizante Gris</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Sanitario & Lavamanos:</span>
+                                <span class="font-semibold text-slate-900">One-Piece Blanco Estándar</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Grifería & Ducha:</span>
+                                <span class="font-semibold text-slate-900">Negro Mate Minimalista</span>
+                            </div>
+                            <div class="flex justify-between py-2">
+                                <span class="text-slate-600">Tiempo de Ejecución:</span>
+                                <span class="font-semibold text-slate-900">8 - 10 Días Hábiles</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-sky-50 rounded-2xl p-6 border border-sky-100">
+                        <h4 class="text-sm font-bold text-sky-900 mb-2 flex items-center space-x-2">
+                            <i class="fa-solid fa-lightbulb text-sky-600"></i>
+                            <span>Ventajas de este Kit</span>
+                        </h4>
+                        <p class="text-xs text-sky-800 leading-relaxed">
+                            Ideal para espacios reducidos donde se busca ampliar la sensación térmica y de orden. La continuidad del formato 60x60 minimiza el mantenimiento y la acumulación de suciedad en fraguas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Section Option 2 -->
+    <section id="opcion-2" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-4 border-b border-slate-200">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-amber-100 text-amber-800 font-bold text-xs rounded-md uppercase tracking-wide mb-2">Opción 2</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Kit Beige Cálido Texturizado</h2>
+                    <p class="text-slate-600 text-sm mt-1">Ambiente refinado con texturas sutiles, tonos arena y acabados amaderados estilo spa.</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex items-center space-x-2">
+                    <span class="text-xs text-slate-500 font-medium">Estilo:</span>
+                    <span class="bg-amber-100 text-amber-900 font-semibold text-xs px-3 py-1 rounded-full border border-amber-200">Spa Urbano Cálido</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Viewer Column (Render 3D / Materiales / Plano) -->
+                <div class="lg:col-span-7 bg-white rounded-2xl p-4 sm:p-6 border border-slate-200 shadow-sm">
+                    <!-- Tab Buttons -->
+                    <div class="flex space-x-2 mb-4 bg-slate-100 p-1.5 rounded-xl">
+                        <button onclick="switchKitTab('kit2', 'render')" id="tab-kit2-render" class="tab-btn active flex-1 py-2 px-3 text-xs sm:text-sm font-semibold rounded-lg transition duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-cube"></i>
+                            <span>Render 3D</span>
+                        </button>
+                        <button onclick="switchKitTab('kit2', 'materials')" id="tab-kit2-materials" class="tab-btn flex-1 py-2 px-3 text-xs sm:text-sm font-semibold text-slate-600 rounded-lg hover:bg-slate-200/70 transition duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-swatchbook"></i>
+                            <span>Materiales</span>
+                        </button>
+                        <button onclick="switchKitTab('kit2', 'plan')" id="tab-kit2-plan" class="tab-btn flex-1 py-2 px-3 text-xs sm:text-sm font-semibold text-slate-600 rounded-lg hover:bg-slate-200/70 transition duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                            <span>Plano Técnico</span>
+                        </button>
+                    </div>
+
+                    <!-- View Container -->
+                    <div class="relative h-[380px] sm:h-[460px] rounded-xl overflow-hidden bg-white border border-slate-200 shadow-inner">
+                        <!-- View 1: Render 3D -->
+                        <div id="view-kit2-render" class="w-full h-full">
+                            <img src="Kit Beige Cálido Texturizado_2.jpg" class="w-full h-full object-cover rounded-xl" alt="Kit Beige Cálido Texturizado - Render Realista">
+                        </div>
+
+                        <!-- View 2: Materiales -->
+                        <div id="view-kit2-materials" class="hidden w-full h-full p-6 bg-amber-950 text-white overflow-y-auto">
+                            <h4 class="text-sm font-bold text-amber-400 mb-4 uppercase tracking-wider">Paleta Beige & Cálida</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                <div class="bg-amber-900/60 p-3 rounded-xl border border-amber-800">
+                                    <div class="h-20 bg-amber-200 rounded-lg mb-2"></div>
+                                    <p class="text-xs font-semibold">Porcelanato Arena</p>
+                                    <p class="text-[10px] text-amber-300">Textura Sutil Travertino</p>
+                                </div>
+                                <div class="bg-amber-900/60 p-3 rounded-xl border border-amber-800">
+                                    <div class="h-20 bg-amber-800 rounded-lg mb-2"></div>
+                                    <p class="text-xs font-semibold">Madera Hidrófuga</p>
+                                    <p class="text-[10px] text-amber-300">Acabado Roble Nuez</p>
+                                </div>
+                                <div class="bg-amber-900/60 p-3 rounded-xl border border-amber-800">
+                                    <div class="h-20 bg-yellow-600/40 border border-yellow-500 rounded-lg mb-2"></div>
+                                    <p class="text-xs font-semibold">Accesorios Oro Cepillado</p>
+                                    <p class="text-[10px] text-amber-300">Toque Cálido Elegante</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- View 3: Plano Técnico -->
+                        <div id="view-kit2-plan" class="hidden w-full h-full p-6 bg-slate-100 flex flex-col justify-center items-center text-center">
+                            <i class="fa-solid fa-drafting-compass text-5xl text-amber-700/40 mb-3"></i>
+                            <h4 class="text-base font-bold text-slate-800">Distribución de Planta - Kit 2</h4>
+                            <p class="text-xs text-slate-500 max-w-sm mt-1">
+                                Configuración tipo Spa con vanitory voladizo e iluminación lineal en hornacina de ducha.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specs Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Especificaciones Clave</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Revestimiento Muros:</span>
+                                <span class="font-semibold text-slate-900">Porcelanato 60x120 Beige Arena</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Mueble de Baño:</span>
+                                <span class="font-semibold text-slate-900">Flotante con Textura Roble</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Espejo:</span>
+                                <span class="font-semibold text-slate-900">Circular con Iluminación LED</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Grifería:</span>
+                                <span class="font-semibold text-slate-900">Champagne / Dorado Cepillado</span>
+                            </div>
+                            <div class="flex justify-between py-2">
+                                <span class="text-slate-600">Tiempo de Ejecución:</span>
+                                <span class="font-semibold text-slate-900">10 - 12 Días Hábiles</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 rounded-2xl p-6 border border-amber-200">
+                        <h4 class="text-sm font-bold text-amber-900 mb-2 flex items-center space-x-2">
+                            <i class="fa-solid fa-sparkles text-amber-600"></i>
+                            <span>Ventajas de este Kit</span>
+                        </h4>
+                        <p class="text-xs text-amber-800 leading-relaxed">
+                            Proporciona una atmósfera acogedora de desconexión. Las grandes piezas de porcelanato reducen al mínimo las líneas de junta, acentuando un estilo de hotel de lujo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Section Option 3 -->
+    <section id="opcion-3" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-4 border-b border-slate-200">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 font-bold text-xs rounded-md uppercase tracking-wide mb-2">Opción 3</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Kit Cenefa y Ducha Antideslizante</h2>
+                    <p class="text-slate-600 text-sm mt-1">Diseño dinámico enfocado en zonas húmedas seguras y acento decorativo distintivo.</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex items-center space-x-2">
+                    <span class="text-xs text-slate-500 font-medium">Estilo:</span>
+                    <span class="bg-emerald-100 text-emerald-900 font-semibold text-xs px-3 py-1 rounded-full border border-emerald-200">Contemporáneo Funcional</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Viewer Column (Render 3D / Materiales / Plano) -->
+                <div class="lg:col-span-7 bg-slate-50 rounded-2xl p-4 sm:p-6 border border-slate-200">
+                    <!-- Tab Buttons -->
+                    <div class="flex space-x-2 mb-4 bg-slate-200/70 p-1.5 rounded-xl">
+                        <button onclick="switchKitTab('kit3', 'render')" id="tab-kit3-render" class="tab-btn active flex-1 py-2 px-3 text-xs sm:text-sm font-semibold rounded-lg transition duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-cube"></i>
+                            <span>Render 3D</span>
+                        </button>
+                        <button onclick="switchKitTab('kit3', 'materials')" id="tab-kit3-materials" class="tab-btn flex-1 py-2 px-3 text-xs sm:text-sm font-semibold text-slate-600 rounded-lg hover:bg-slate-300/50 transition duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-swatchbook"></i>
+                            <span>Materiales</span>
+                        </button>
+                        <button onclick="switchKitTab('kit3', 'plan')" id="tab-kit3-plan" class="tab-btn flex-1 py-2 px-3 text-xs sm:text-sm font-semibold text-slate-600 rounded-lg hover:bg-slate-300/50 transition duration-200 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                            <span>Plano Técnico</span>
+                        </button>
+                    </div>
+
+                    <!-- View Container -->
+                    <div class="relative h-[380px] sm:h-[460px] rounded-xl overflow-hidden bg-white border border-slate-200 shadow-inner">
+                        <!-- View 1: Render 3D -->
+                        <div id="view-kit3-render" class="w-full h-full">
+                            <img src="Kit Cenefa y Ducha Antideslizante_2.jpg" class="w-full h-full object-cover rounded-xl" alt="Kit Cenefa y Ducha Antideslizante - Render Realista">
+                        </div>
+
+                        <!-- View 2: Materiales -->
+                        <div id="view-kit3-materials" class="hidden w-full h-full p-6 bg-slate-900 text-white overflow-y-auto">
+                            <h4 class="text-sm font-bold text-emerald-400 mb-4 uppercase tracking-wider">Paleta Cenefa & Antideslizante</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+                                    <div class="h-20 bg-gradient-to-r from-teal-500 via-emerald-600 to-slate-700 rounded-lg mb-2"></div>
+                                    <p class="text-xs font-semibold">Cenefa Mosaico</p>
+                                    <p class="text-[10px] text-slate-400">Detalle Texturizado en Ducha</p>
+                                </div>
+                                <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+                                    <div class="h-20 bg-slate-700 rounded-lg mb-2 flex items-center justify-center">
+                                        <i class="fa-solid fa-grip text-2xl text-slate-400"></i>
+                                    </div>
+                                    <p class="text-xs font-semibold">Piso Antideslizante R11</p>
+                                    <p class="text-[10px] text-slate-400">Seguridad en Zona Húmeda</p>
+                                </div>
+                                <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+                                    <div class="h-20 bg-slate-300 rounded-lg mb-2"></div>
+                                    <p class="text-xs font-semibold">Grifería Cromo</p>
+                                    <p class="text-[10px] text-slate-400">Acabado Brillante Anti-sarro</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- View 3: Plano Técnico -->
+                        <div id="view-kit3-plan" class="hidden w-full h-full p-6 bg-slate-100 flex flex-col justify-center items-center text-center">
+                            <i class="fa-solid fa-drafting-compass text-5xl text-emerald-700/40 mb-3"></i>
+                            <h4 class="text-base font-bold text-slate-800">Distribución de Planta - Kit 3</h4>
+                            <p class="text-xs text-slate-500 max-w-sm mt-1">
+                                Diseño centrado en seguridad con desnivel técnico y desagüe lineal en ducha.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specs Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Especificaciones Clave</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Detalle Decorativo:</span>
+                                <span class="font-semibold text-slate-900">Cenefa Geométrica / Mosaico</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Piso de Ducha:</span>
+                                <span class="font-semibold text-slate-900">Antideslizante Certificado R11</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Paredes Principal:</span>
+                                <span class="font-semibold text-slate-900">Cerámica Blanca / Hueso Mate</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-200">
+                                <span class="text-slate-600">Grifería:</span>
+                                <span class="font-semibold text-slate-900">Cromo Inoxidable Alta Calidad</span>
+                            </div>
+                            <div class="flex justify-between py-2">
+                                <span class="text-slate-600">Tiempo de Ejecución:</span>
+                                <span class="font-semibold text-slate-900">9 - 11 Días Hábiles</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-emerald-50 rounded-2xl p-6 border border-emerald-100">
+                        <h4 class="text-sm font-bold text-emerald-900 mb-2 flex items-center space-x-2">
+                            <i class="fa-solid fa-shield-heart text-emerald-600"></i>
+                            <span>Ventajas de este Kit</span>
+                        </h4>
+                        <p class="text-xs text-emerald-800 leading-relaxed">
+                            Máxima seguridad antiderrapante para niños y adultos mayores, combinada con el toque estético de la cenefa central que rompe la monotonía del muro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section id="comparativa" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-sky-400 font-bold text-xs uppercase tracking-widest">Matriz de Selección</span>
+                <h2 class="text-3xl font-extrabold text-white mt-1">Tabla Comparativa de Opciones</h2>
+                <p class="text-slate-400 text-sm mt-2">Compare las características clave de cada propuesta para tomar la mejor decisión.</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-300 border-collapse min-w-[700px]">
+                    <thead>
+                        <tr class="border-b border-slate-800 bg-slate-800/60 text-white">
+                            <th class="py-4 px-4 font-bold">Característica</th>
+                            <th class="py-4 px-4 font-bold text-sky-400">Kit 1: Gris Neutro</th>
+                            <th class="py-4 px-4 font-bold text-amber-400">Kit 2: Beige Cálido</th>
+                            <th class="py-4 px-4 font-bold text-emerald-400">Kit 3: Cenefa & Ducha</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800">
+                        <tr>
+                            <td class="py-4 px-4 font-semibold text-white">Enfoque Principal</td>
+                            <td class="py-4 px-4">Continuidad & Costo-eficiencia</td>
+                            <td class="py-4 px-4">Elegancia & Sensación Spa</td>
+                            <td class="py-4 px-4">Seguridad & Detalle Visual</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-semibold text-white">Formato de Revestimiento</td>
+                            <td class="py-4 px-4">60x60 cm Continuo</td>
+                            <td class="py-4 px-4">60x120 cm Gran Formato</td>
+                            <td class="py-4 px-4">Formatos Mixtos + Cenefa</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-semibold text-white">Grifería & Acabados</td>
+                            <td class="py-4 px-4">Monomando Negro Mate</td>
+                            <td class="py-4 px-4">Champagne / Oro Cepillado</td>
+                            <td class="py-4 px-4">Cromo Inoxidable</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-semibold text-white">Textura de Piso Ducha</td>
+                            <td class="py-4 px-4">Mate Antideslizante Estándar</td>
+                            <td class="py-4 px-4">Textura Travertino Sutil</td>
+                            <td class="py-4 px-4">Relieve Antideslizante R11 Alta Fricción</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-semibold text-white">Mantenimiento</td>
+                            <td class="py-4 px-4">Muy Bajo (Juntas mínimas)</td>
+                            <td class="py-4 px-4">Bajo (Piezas grandes)</td>
+                            <td class="py-4 px-4">Estándar (Limpieza de cenefa)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Action Footer -->
+    <footer id="contacto" class="bg-white py-12 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <h3 class="text-xl font-bold text-slate-900">¿Listo para iniciar su remodelación?</h3>
+                <p class="text-slate-600 text-sm mt-1">Solicite una visita técnica de medición y cotización formal sin compromiso.</p>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <button onclick="window.print()" class="px-5 py-3 text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition">
+                    <i class="fa-solid fa-download mr-2"></i>Guardar Catálogo
+                </button>
+                <a href="https://wa.me/" target="_blank" class="px-6 py-3 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-md transition flex items-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Contactar por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-slate-100 text-center text-xs text-slate-400">
+            &copy; 2026 Arquitectura & Remodelaciones. Todos los derechos reservados. Imágenes e imágenes 3D de catálogo técnico.
+        </div>
+    </footer>
+
+    <!-- Tab Switching Logic JavaScript -->
+    <script>
+        function switchKitTab(kitId, tabType) {
+            // Available tab options
+            const tabs = ['render', 'materials', 'plan'];
+
+            // Hide all view containers for this kit
+            tabs.forEach(t => {
+                const viewEl = document.getElementById(`view-${kitId}-${t}`);
+                const btnEl = document.getElementById(`tab-${kitId}-${t}`);
+                
+                if (viewEl) {
+                    viewEl.classList.add('hidden');
+                }
+                if (btnEl) {
+                    btnEl.classList.remove('active', 'bg-slate-900', 'text-white');
+                    btnEl.classList.add('text-slate-600');
+                }
+            });
+
+            // Show selected view container
+            const activeView = document.getElementById(`view-${kitId}-${tabType}`);
+            const activeBtn = document.getElementById(`tab-${kitId}-${tabType}`);
+
+            if (activeView) {
+                activeView.classList.remove('hidden');
+            }
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'bg-slate-900', 'text-white');
+                activeBtn.classList.remove('text-slate-600');
+            }
+        }
+    </script>
+</body>
+</html>

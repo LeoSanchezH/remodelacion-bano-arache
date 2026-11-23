@@ -123,7 +123,7 @@
             <!-- Card 1: Kit Económico Continuo (Gris Neutro) -->
             <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-200 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300 group">
                 <div class="relative h-64 bg-slate-100 overflow-hidden">
-                    <img src="assets/Kit%20Econ%C3%B3mico%20Continuo.png" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition duration-500" alt="Kit Económico Continuo - Render Realista">
+                    <img src="assets/kit-economico-continuo.png" onerror="this.onerror=null; this.src='assets/Kit%20Econ%C3%B3mico%20Continuo.png';" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition duration-500" alt="Kit Económico Continuo - Render Realista">
                     <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">
                         Opción 1
                     </div>
@@ -272,7 +272,7 @@
                     <div class="relative h-[380px] sm:h-[460px] rounded-xl overflow-hidden bg-white border border-slate-200 shadow-inner">
                         <!-- View 1: Render 3D -->
                         <div id="view-kit1-render" class="w-full h-full">
-                            <img src="assets/Kit%20Econ%C3%B3mico%20Continuo.png" class="w-full h-full object-cover rounded-xl" alt="Kit Económico Continuo - Render Realista">
+                            <img src="assets/kit-economico-continuo.png" onerror="this.onerror=null; this.src='assets/Kit%20Econ%C3%B3mico%20Continuo.png';" class="w-full h-full object-cover rounded-xl" alt="Kit Económico Continuo - Render Realista">
                         </div>
 
                         <!-- View 2: Materiales -->
@@ -668,10 +668,8 @@
     <!-- Tab Switching Logic JavaScript -->
     <script>
         function switchKitTab(kitId, tabType) {
-            // Available tab options
             const tabs = ['render', 'materials', 'plan'];
 
-            // Hide all view containers for this kit
             tabs.forEach(t => {
                 const viewEl = document.getElementById(`view-${kitId}-${t}`);
                 const btnEl = document.getElementById(`tab-${kitId}-${t}`);
@@ -685,7 +683,6 @@
                 }
             });
 
-            // Show selected view container
             const activeView = document.getElementById(`view-${kitId}-${tabType}`);
             const activeBtn = document.getElementById(`tab-${kitId}-${tabType}`);
 
